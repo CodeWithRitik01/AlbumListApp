@@ -1,0 +1,32 @@
+.albumContainer{
+    display: inline-grid;
+    justify-content: space-around;
+    grid-template-columns: repeat(3, 1fr);
+    height: 80px;
+    width: 99%;
+    margin-bottom: 20px;
+    background-image: linear-gradient(to right, whitesmoke, rgb(211, 210, 210));
+    padding: 20px;
+}
+
+li{
+    list-style: none;
+}
+
+
+
+ img{
+    height: 40px;
+    height: 40px;
+    margin-left: 300px;
+    cursor: pointer;
+    
+}
+
+.dltImg{
+    border-radius: 40px;
+}
+
+.dltImg:hover{
+    box-shadow: 0px 10px 10px 0px black;
+}

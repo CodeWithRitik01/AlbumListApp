@@ -1,0 +1,44 @@
+.formClass{
+    display: block;
+}
+
+h1{
+    text-align: center;
+    font-size: 45px;
+    text-shadow: 2px 2px #3e3d3d;
+}
+
+.realForm{
+    display: grid;
+    justify-content: center;
+}
+
+.realForm label{
+    text-align: center;
+    font-size: 25px;
+    color:aqua;
+}
+
+.realForm input{
+    height: 30px;
+    width:300px;
+    border: 1px solid aqua;
+    border-radius: 50px;
+}
+
+.realForm button{
+    margin-top: 20px;
+    height: 25px;
+    width: 200px;
+    margin-left: 50px;
+    border: 1px solid brown;
+    background-color: white;
+    color: brown;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+.realForm button:hover{
+    background-color: brown;
+    color:white;
+}
