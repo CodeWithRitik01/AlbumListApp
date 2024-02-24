@@ -9,6 +9,8 @@ let INITIALSTATE={
     Ids:0
 }
 
+// FETCHING objects from API
+
 export const getInitialStateAsync = createAsyncThunk("album/getInitialState",
    ()=>{
     return axios.get("https://jsonplaceholder.typicode.com/albums")
@@ -16,8 +18,9 @@ export const getInitialStateAsync = createAsyncThunk("album/getInitialState",
 )
 
 
-export const addAlbumAsync = createAsyncThunk("album/addAlbum", async (payload) =>{
-    console.log(payload, "ye hai")
+// ADDING object to API
+
+export const addAlbumAsync = createAsyncThunk("album/addAlbum", async (payload) =>{   
     const response = await fetch("https://jsonplaceholder.typicode.com/albums", {
         method:"POST",
         headers:{
@@ -30,14 +33,13 @@ export const addAlbumAsync = createAsyncThunk("album/addAlbum", async (payload) 
            
         })
     });
-    console.log(response,"response")
     return  response.json();
 })
 
 
+// UPDATING object from API
 
 export const updateAlbumAsync = createAsyncThunk("album/updateAlbum", async (payload) =>{
-    console.log(payload, "ye hai")
     const {textValue, Ids} = payload;
     const response = await fetch(`https://jsonplaceholder.typicode.com/albums/${Ids}`, {
         method: 'PUT',
@@ -48,19 +50,20 @@ export const updateAlbumAsync = createAsyncThunk("album/updateAlbum", async (pay
             'Content-type': 'application/json',
         }
     })
-    console.log(response.json);
     return response.json();
 })
 
+// DELETING object from API
+
 export const deleteAlbumAsync = createAsyncThunk("album/deleteAlbum", async (payload) =>{
     
-    console.log(payload);
     const response = await fetch(`https://jsonplaceholder.typicode.com/albums/${payload}`,{
         method: 'DELETE',
     })
 
     return payload;
 })
+
 
 const AlbumSlice = createSlice({
     name:'album',
@@ -75,7 +78,6 @@ const AlbumSlice = createSlice({
     },
     extraReducers:(builder)=>{
         builder.addCase(getInitialStateAsync.fulfilled, (state, action)=>{
-            console.log("loaded");
             state.albums = [...action.payload.data]
         })
         .addCase(addAlbumAsync.fulfilled, (state, action)=>{
@@ -83,13 +85,11 @@ const AlbumSlice = createSlice({
         })
         .addCase(updateAlbumAsync.fulfilled, (state, action) => {
             const { title, id } = action.payload;
-            console.log(title, "ye dusra hai")
             state.albums = state.albums.map((album) => (
                 album.id === id ? {title :title} : album
             ));
         })
         .addCase(deleteAlbumAsync.fulfilled, (state, action) =>{
-            console.log(action.payload, "ye dusra")
             state.albums = state.albums.filter((album, key) => 
                 album.id!==action.payload
             )

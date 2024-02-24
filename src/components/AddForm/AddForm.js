@@ -11,7 +11,6 @@ function AddForm(){
 
    const handleSubmit =(e) =>{
     e.preventDefault();
-    console.log(text);
     dispatch(addAlbumAsync(text));
     setText('');
     setUserid('');
