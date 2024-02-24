@@ -1,4 +1,4 @@
-# Album Management App
+# Album List App
 This is a simple React application for managing albums. It fetches album data from the provided API, allows users to add new albums, update existing albums, and delete albums.
 
 # Features
