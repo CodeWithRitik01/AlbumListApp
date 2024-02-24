@@ -1,70 +1,39 @@
-# Getting Started with Create React App
+# Album Management App
+This is a simple React application for managing albums. It fetches album data from the provided API, allows users to add new albums, update existing albums, and delete albums.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Features
+Fetch albums from JSONPlaceholder API
+Add a new album (dummy request)
+Update an existing album (dummy request)
+Delete an album (dummy request)
 
-## Available Scripts
+1.Install dependencies:
+npm install
 
-In the project directory, you can run:
+2.Start the development server:
+npm start
 
-### `npm start`
+Open your browser and go to http://localhost:3000 to view the app.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+# Project Setup
+This project uses React for the frontend.
+Redux is used for state management.
+Axios is used for making HTTP requests.
+The project follows a modular component-based structure for better organization and reusability.
+The Redux store is configured to manage the state of albums.
+The AlbumList component fetches albums from the API and displays them.
+The AddAlbumForm component allows users to add new albums.
+The UpdateAlbumForm component allows users to update existing albums.
+The albumReducer handles actions related to albums, such as fetching, adding, updating, and deleting.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+# How to Use
+Fetching Albums: The list of albums is fetched from the JSONPlaceholder API when the app loads.
 
-### `npm test`
+Adding an Album: Click on the "Add Album" button, fill in the details in the form, and submit. This will add a new album to the list (dummy request).
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Updating an Album: Click on the "Edit" button next to the album you want to update, make the desired changes in the form, and submit. This will update the album (dummy request).
 
-### `npm run build`
+Deleting an Album: Click on the "Delete" button next to the album you want to delete. Confirm the action, and the album will be removed from the list (dummy request).
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+# Hosted Project
+Link to Hosted Project ("https://radiant-squirrel-3222ef.netlify.app/")
