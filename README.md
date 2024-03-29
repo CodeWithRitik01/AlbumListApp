@@ -1,3 +1,9 @@
+
+![Screenshot (279)](https://github.com/CodeWithRitik01/AlbumListApp/assets/141724500/4f56d4b7-15d9-4239-b602-c26ef83bc9d0)
+![Screenshot (280)](https://github.com/CodeWithRitik01/AlbumListApp/assets/141724500/92e38a15-7123-4cdb-b830-1e2dec7ae12f)
+![Screenshot (281)](https://github.com/CodeWithRitik01/AlbumListApp/assets/141724500/029aa741-303e-439a-9d7d-ccf8710305d7)
+
+
 # Album List App
 This is a simple React application for managing albums. It fetches album data from the provided API, allows users to add new albums, update existing albums, and delete albums.
 
